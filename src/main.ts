@@ -6,10 +6,10 @@ import { Transport } from '@nestjs/microservices';
 const logger = new Logger('Main');
 
 const microserviceOptions = {
-  transport: Transport.TCP,
+  transport: Transport.REDIS,
   options: {
-    host: '127.0.0.1',
-    port: 8877,
+    host: 'localhost',
+    port: 6379,
   },
 };
 async function bootstrap() {
